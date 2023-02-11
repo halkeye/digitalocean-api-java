@@ -96,6 +96,9 @@ public class Droplet extends Base {
   @SerializedName("monitoring")
   private Boolean installMonitoring;
 
+  @SerializedName("vpc_uuid")
+  private String vpcUuid;
+
   @Override
   public String toString() {
     return ReflectionToStringBuilder.toString(this);
@@ -369,5 +372,14 @@ public class Droplet extends Base {
   /** @param installMonitoring the installMonitoring to set */
   public void setInstallMonitoring(Boolean installMonitoring) {
     this.installMonitoring = installMonitoring;
+  }
+
+  public String getVpcUuid() {
+    return vpcUuid;
+  }
+
+  /** @param vpcUuid the VPC UUID to set */
+  public void setVpcUuid(String vpcUuid) {
+    this.vpcUuid = vpcUuid;
   }
 }
