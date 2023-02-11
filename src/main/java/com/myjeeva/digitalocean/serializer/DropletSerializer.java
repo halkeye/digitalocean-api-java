@@ -114,6 +114,11 @@ public class DropletSerializer implements JsonSerializer<Droplet> {
       jsonObject.addProperty("monitoring", droplet.getInstallMonitoring());
     }
 
+    // VPC UUID
+    if (null != droplet.getVpcUuid()) {
+      jsonObject.addProperty("vpc_uuid", droplet.getVpcUuid());
+    }
+
     return jsonObject;
   }
 }
